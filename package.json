@@ -10,6 +10,7 @@
     "discord-bot",
     "discord"
   ],
+  "homepage": "https://djs-twitch.js.org",
   "repository": "https://github.com/discordjs-twitch/discordjs-twitch.git",
   "author": "WhyMe#1126",
   "license": "Apache",
