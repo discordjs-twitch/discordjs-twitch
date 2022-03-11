@@ -27,13 +27,25 @@ client.on("messageCreate", async (message) => {
   var cmd = args.shift().toLowerCase();
 
   if (cmd === "setchannel") {
+    const channel = message.mentions.channel.first() || args[0];
+    if(!channel) {
+      message.reply("Mention the text channel!");
+      return;
+    }
+    
     manager
-      .setChannel(message.guild.id, "930121454052335656")
+      .setChannel(message.guild.id, channel.id)
       .catch(console.log);
 
     message.reply("Success!");
     return;
-  } else if (cmd === "whyme") {
+  } else if (cmd === "addchannel") {
+    const channel = args[0];
+    if(!channel) {
+      message.reply("Write the channel username");
+      return;
+    }
+    
     const data = await manager.streamers.add(message.guild.id, "whymeosu");
     if ("status" in data) return console.log(data);
 
