@@ -1,5 +1,5 @@
 import { Client } from "discord.js";
-import { Manager } from "../src/index";
+import { Manager } from "discordjs-twitch";
 
 const client = new Client({
   intents: ["GUILDS", "GUILD_MESSAGES"],
