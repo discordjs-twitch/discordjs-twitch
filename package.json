@@ -24,7 +24,7 @@
     "enmap": "^5.8.8",
     "moment": "^2.29.1",
     "tiny-typed-emitter": "^2.1.0",
-    "undici": "^4.15.1"
+    "undici": "^5.3.0"
   },
   "engines": {
     "node": ">=14"
